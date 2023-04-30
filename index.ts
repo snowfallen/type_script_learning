@@ -21,3 +21,7 @@ const firstTuple: [string, number] = ['Arpil', 24]
 
 //type
 type ID = number | string
+
+//type example
+const userId: ID = 1232
+const adminId: ID = 'asd1243das4323ed'
