@@ -19,3 +19,5 @@ const arrayString2: Array<string> = ['q','w','e','r','t','y','2'];
 //tuple
 const firstTuple: [string, number] = ['Arpil', 24]
 
+//type
+type ID = number | string
