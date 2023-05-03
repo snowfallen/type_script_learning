@@ -137,3 +137,11 @@ type ACTypes = ReturnType<typeof AC> | ReturnType<typeof AC2>
 
 const action: ACType = {type: 'SET-AGE', age: 24}
 const action2: ACT2ype = {firstName: 'sas', lastName: 'dasdsa', type: 'dasdsa'}
+
+interface Number {
+    one: number
+    two: string
+}
+
+const func = (value: keyof Number) =>{}
+func('one')
