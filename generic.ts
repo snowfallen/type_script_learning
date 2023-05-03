@@ -113,3 +113,16 @@ const response2: ServerResponseType<PhotoType> = {
         small: 'qeqweqwddqwdaawda'
     }
 }
+
+type Nullable<T> = null | T
+const initial = {
+    age: 24,
+    name: 'Sano',
+    user: null as Nullable<UserType>,
+    photo: null as Nullable<PhotoType>
+}
+
+type StateType = typeof  initial
+const reducer = (state: StateType = initial, action: any) => {
+  return state
+}
