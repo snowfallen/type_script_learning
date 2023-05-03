@@ -126,3 +126,14 @@ type StateType = typeof  initial
 const reducer = (state: StateType = initial, action: any) => {
   return state
 }
+
+const AC = (age: number) => ({type: 'SET-AGE', age} as const)
+const AC2 = (firstName: string, lastName: string ) => ({type: 'SET-AGE', firstName, lastName})
+
+type ACType = ReturnType<typeof AC>
+type ACT2ype = ReturnType<typeof AC2>
+
+type ACTypes = ReturnType<typeof AC> | ReturnType<typeof AC2>
+
+const action: ACType = {type: 'SET-AGE', age: 24}
+const action2: ACT2ype = {firstName: 'sas', lastName: 'dasdsa', type: 'dasdsa'}
