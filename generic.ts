@@ -68,7 +68,7 @@ let t1 = 'HI';
 let t2 = [1,2,3];
 let t3 = {length : 10}
 
-function withComment<U extends WithLength>(item: U): [U, string] {
+function withComment<U extends keyof WithLength>(item: U): [U, string] {
     return [item, `${item.length}`]
 }
 // function withComment(item: WithLength): [WithLength, string] {
@@ -76,4 +76,21 @@ function withComment<U extends WithLength>(item: U): [U, string] {
 // }
 
 let [item, comment] = withComment(t1)
-console.log(item, comment)
+console.log(item.length, comment)
+
+type UserType = {
+    firstName: string
+    lastName: string
+    age: number
+}
+
+type PhotoType = {
+    large: string
+    small: string
+}
+
+type ServerResponseType = {
+    errorCode: number
+    messages: Array<string>
+    data: UserType
+}
