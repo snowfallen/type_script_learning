@@ -89,8 +89,27 @@ type PhotoType = {
     small: string
 }
 
-type ServerResponseType = {
+type ServerResponseType<T> = {
     errorCode: number
     messages: Array<string>
-    data: UserType
+    data: T
+}
+
+const response1: ServerResponseType<UserType> = {
+    errorCode: 0,
+    messages: ['success'],
+    data: {
+        firstName: 'Sania',
+        age: 24,
+        lastName: 'Bondarenko'
+    }
+}
+
+const response2: ServerResponseType<PhotoType> = {
+    errorCode: 0,
+    messages: ['success'],
+    data: {
+        large: 'qeqweqwddqwdaawda',
+        small: 'qeqweqwddqwdaawda'
+    }
 }
